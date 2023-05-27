@@ -65,7 +65,7 @@ $ sudo apt install ./code-<filename>
 4. Explore에서 New File 버튼을 클릭하고 Hello.java 파일을 추가합니다.  
 <img src="images/image03.png" width="200">
 5. 코드 에디터에 아래와 같은 코드를 작성합니다.
-```Java
+```
 public class Hello {
     public static void main(String[] args) {
         System.out.println("Hello, World!");
