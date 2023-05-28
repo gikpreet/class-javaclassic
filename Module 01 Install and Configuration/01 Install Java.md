@@ -56,32 +56,6 @@ $ sudo apt install ./code-<filename>
 3. Extension Pack for Java를 설치합니다.
 
 
-## Hello, World! 응용 프로그램 작성
-이 연습에서는 첫 번째 Java 응용 프로그램, Hello, World!를 작성합니다. 아래 절차에 따릅니다.
-
-1. Visual Studio Code의 파일 메뉴에서 Open Folder를 클릭합니다.
-2. 코드가 위치할 디렉토리를 지정하고 오른쪽 위의 Open 버튼을 클릭합니다.
-3. Yes, I trust the authors 버튼을 클릭합니다.
-4. Explore에서 New File 버튼을 클릭하고 Hello.java 파일을 추가합니다.  
-![](./images/image03.png)
-5. 코드 에디터에 아래와 같은 코드를 작성합니다.
-```java
-public class Hello {
-    public static void main(String[] args) {
-        System.out.println("Hello, World!");
-    }
-}
-```
-6. Visual Studio Code의 Terminal 메뉴에서 new Terminal을 클릭합니다.
-7. 터미널에서, 아래 명령을 실행하여 작성한 코드를 컴파일합니다.
-```bash
-$ javac Hello.java
-```
-8. 컴파일이 완료되면, Hello.class 파일이 생성됩니다. 아래 명령을 실행하여 Hello 응용 프로그램을 실행합니다.
-```bash
-$ java Hello
-Hello, World!
-```
 
 
 
