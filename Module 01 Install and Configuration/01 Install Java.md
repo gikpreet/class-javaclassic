@@ -55,7 +55,18 @@ $ sudo apt install ./code-<filename>
 <img src="images/image02.png" width="200">
 3. Extension Pack for Java를 설치합니다.
 
+## Visual Studio Code path 설정
+이 연습에서는 Visual Studio Code의 원활한 사용을 위해 path를 설정합니다. Windows와 Linux 운영체제에서는 Visual Studio Code를 설치하면 path가 지정되므로, 작업이 필요하지 않습니다.
 
+> 이 작업은 macOS 운영체제에서만 실행합니다.
 
-
-
+1. Visual Studio Code를 실행합니다.
+2. Ctrl + Shift + P 키를 눌러 명령 팔레트를 열고, path로 검색한 후 아래 명령을 실행합니다.
+```
+Shell Command: Install ‘code’ command in PATH
+(한글) 셸 명령: PATH에 'code' 명령 설치
+```
+3. 터미널을 열고, 아래 명령을 실행하여 path를 확인합니다.
+```
+% code -v
+```
