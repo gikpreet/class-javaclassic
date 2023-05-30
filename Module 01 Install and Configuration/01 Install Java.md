@@ -66,7 +66,10 @@ $ sudo apt install ./code-<filename>
 Shell Command: Install ‘code’ command in PATH
 (한글) 셸 명령: PATH에 'code' 명령 설치
 ```
-3. 터미널을 열고, 아래 명령을 실행하여 path를 확인합니다.
+![](images/image04.png)
+
+3. 지문 인식 또는 패스워드를 입력하여 인증을 제공합니다.
+4. 터미널을 열고, 아래 명령을 실행하여 path를 확인합니다.
 ```
 % code -v
 ```
