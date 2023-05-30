@@ -65,5 +65,36 @@ $$ ^\circ C = ( ^\circ F - 32)  \times (5 / 9) $$
 1. 터미널을 엽니다.
 2. 아래 명령을 실행하여 프로그램을 작성할 디렉토리를 만듭니다.
 ```
-$ mkdir -p /java/module01
+$ mkdir -p $HOME/java/module01
+```
+3. 아래 명령을 실행하여 생성한 디렉토리로 이동합니다.
+```
+$ cd $HOME
+$ cd java/module01
+```
+4. 아래 명령을 실행하여 현재 디렉토리에서 Visual Studio Code를 엽니다.
+```
+$ code .
+```
+5. Celsius.java 파일을 생성합니다.
+6. 파일에 아래와 같은 코드를 작성합니다.
+```java
+public class Celsius {
+    public static void main(String[] args) {
+        int fahr, celsius;
+        int lower, upper, step;
+
+        lower = 0;
+        upper = 300;
+        step = 20;
+
+        fahr = lower;
+
+        while (fahr <= upper) {
+            celsius = 5 * (fahr - 32) / 9;
+            System.out.printf("%d\t%d\n", fahr, celsius);
+            fahr += step;
+        }
+    }
+}
 ```
