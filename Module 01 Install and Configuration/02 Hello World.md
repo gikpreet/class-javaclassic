@@ -32,6 +32,7 @@ Hello, World!
 이 연습에서는 $^\circ C = (5/9) (  ^\circ F - 32)$ 공식을 사용해서 화씨 온도를 섭씨 온도로 바꾸어 출력하는 프로그램을 작성합니다.
 
 ### 섭씨(Celcius)와 화씨(Fahrenheit) 온도
+
 섭씨는 한국을 포함한 많은 나라에서 사용되고 있는 온도의 단위입니다. 표준 기압에서 물의 어는 점을 0 $^\circ $, 물의 끓는 점을 100 $^\circ$로 간주합니다.
 
 화씨는 미국과 일부 영어권에서 사용되는 온도의 단위입니다. 표준 기압에서 물의 어는 점을 32 $^\circ$, 물의 끓는 점을 212 $^\circ$로 간주합니다.
@@ -62,6 +63,7 @@ $$ ^\circ C = ( ^\circ F - 32)  \times (5 / 9) $$
 300     148
 ```
 
+### 환경 설정 및 코드 작성
 1. 터미널을 엽니다.
 2. 아래 명령을 실행하여 프로그램을 작성할 디렉토리를 만듭니다.
 ```
@@ -81,20 +83,138 @@ $ code .
 ```java
 public class Celsius {
     public static void main(String[] args) {
-        int fahr, celsius;
+        int celsius, fahr;
         int lower, upper, step;
 
         lower = 0;
         upper = 300;
-        step = 20;
+        step = 30;
 
         fahr = lower;
 
         while (fahr <= upper) {
             celsius = 5 * (fahr - 32) / 9;
             System.out.printf("%d\t%d\n", fahr, celsius);
-            fahr += step;
+            fahr = fahr + step;
         }
     }
 }
+```
+
+### 컴파일 및 실행
+1. Visual Studio Code의 Terminal 메뉴에서 New Terminal을 클릭하여 터미널을 엽니다.
+2. 터미널에서, 아래 명령을 실행하여 Celsius.java 프로그램을 컴파일 합니다.
+```bash
+$ javac Celsius.java
+```
+3. Visual Studio 탐색기에서, Celsius.class 파일이 생성된 것을 확인합니다.
+4. 아래 명령을 실행하여 컴파일된 Celsius 프로그램을 실행합니다.
+```bash
+$ java Celsius
+```
+5. 실행 결과는 아래와 유사할 것입니다.
+```
+0       -17
+30      -1
+60      15
+90      32
+120     48
+150     65
+180     82
+210     98
+240     115
+270     132
+300     148
+```
+
+### 코드 수정
+화씨에서 섭씨를 구하는 공식은 $ ^\circ C = ( ^\circ F - 32)  \times (5 / 9) $ 이지만 프로그램에서는 다르게 작성해서 결과를 구했습니다.
+
+코드를 아래와 같이 공식을 그대로 사용하도록 수정합니다.
+
+1. Visual Studio Code에서, while 반복문내의 섭씨를 구하는 코드를 아래와 같이 수정합니다.
+```java
+celsius = (fahr - 32) * (5 / 9);
+```
+2. Visual Studio Code 터미널에서, 아래 명령을 실행하여 수정한 코드를 컴파일합니다.
+```bash
+$ javac Celsius.java
+```
+3. 아래 명령을 실행하여 프로그램을 실행합니다.
+```bash
+$ java Celsius
+```
+5. 실행 결과는 아래와 유사할 것입니다. 섭씨가 0으로 표시됩니다.
+```
+0       0
+30      0
+60      0
+90      0
+120     0
+150     0
+180     0
+210     0
+240     0
+270     0
+300     0
+```
+이유가 뭘까요?
+
+## 코드를 다시 수정
+화씨와 섭씨를 표시하는 변수 celsius와 fahr의 타입을 정수형(int)에서 부동소수점형(double)로 변경하도록 코드를 수정합니다.
+
+1. Visual Studio Code에서, celsius와 fahr의 변수 타입을 int가 아닌 double로 변경합니다.
+```java
+double celsius, fahr;
+```
+2. Visual Studio Code에서, while 반복문내의 섭씨를 구하는 코드를 아래와 같이 수정합니다.
+```java
+celsius = (fahr - 32) * (5.0 / 9.0);
+```
+3. while 반복문내의 값을 출력하는 코드를 아래와 같이 변경합니다.
+```java
+System.out.printf("%f\t%f\n", fahr, celsius);
+```
+4. 전체 코드는 아래와 유사할 것입니다.
+```java
+public class Celsius {
+    public static void main(String[] args) {
+        double celsius, fahr;
+        int lower, upper, step;
+
+        lower = 0;
+        upper = 300;
+        step = 30;
+
+        fahr = lower;
+
+        while (fahr <= upper) {
+            celsius = (fahr - 32) * (5.0 / 9.0);
+            System.out.printf("%f\t%f\n", fahr, celsius);
+            fahr = fahr + step;
+        }
+    }
+}
+```
+3. Visual Studio Code 터미널에서, 아래 명령을 실행하여 수정한 코드를 컴파일합니다.
+```bash
+$ javac Celsius.java
+```
+3. 아래 명령을 실행하여 프로그램을 실행합니다.
+```bash
+$ java Celsius
+```
+5. 실행 결과는 아래와 유사할 것입니다.
+```
+0.000000        -17.777778
+30.000000       -1.111111
+60.000000       15.555556
+90.000000       32.222222
+120.000000      48.888889
+150.000000      65.555556
+180.000000      82.222222
+210.000000      98.888889
+240.000000      115.555556
+270.000000      132.222222
+300.000000      148.888889
 ```
