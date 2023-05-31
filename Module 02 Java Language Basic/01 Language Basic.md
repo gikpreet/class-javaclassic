@@ -32,11 +32,11 @@
 * 예약된 키워드는 사용할 수 없음
 ```
 자료형
-boolean     byte        char        double      float       int     long
+boolean     byte        char        double      float       int         long
 short       void
 
 반복문/제어문
-break       case        default     continue    do          else    finally
+break       case        default     continue    do          else        finally
 for         goto        if          switch      while
 
 기타
@@ -65,7 +65,7 @@ void openDocument()
 class ProductFactory
 ```
 #### 모두 대문자
-상수를 선언할 때는 변수의 모든 이름을 대문자를 사용하도록 선언할 것을 권장함
+상수를 선언할 때는 변수의 모든 이름에 대문자를 사용하도록 선언할 것을 권장함
 ```java
 static final int MIN_WIDTH = 4;
 static final int MAX_WIDTH = 999;
@@ -77,11 +77,114 @@ static final int GET_THE_CPU = 1;
 * 이름을 '_'(Underscore)로 시작
 * 약어 사용
 
-### Primitive3 Data Types
+## 컴퓨터가 데이터를 표현하는 방식
+컴퓨터는 Binary(2진수)를 기반으로 데이터를 표현하고 연산합니다. 2진수를 기반으로 연산을 수행하고 이를 Octal(8진수), Decimal(10진수), 16진수(Hexadecimal)등으로 변환합니다.
+* **Binary Number(2진수)** 두 개의 기호(1, 0)를 이용해서 값(데이터)을 표현하는 방식입니다.
+* **Octal Number(8진수)** 여덟 개의 기호(0 ~ 7)를 이용해서 값(데이터)을 표현하는 방식입니다.
+* **Decimal Number(10진수)**  열 개의 기호(0 ~ 9)를 이용해서 값(데이터)을 표현하는 방식입니다.
+* **Hexadecimal Number(16진수)** 열 여섯 개의 기호(0 ~ 9, A ~ F)를 이용해서 값(데이터)을 표현하는 방식입니다.
+
+### Bit(비트)와 바이트(Byte)
+컴퓨터는 2진수를 기반으로 데이터를 처리하고 저장합니다. 0 또는 1은 컴퓨터에서 데이터를 처리하는 최소 단위입니다.
+* **Bit(비트)** 0 또는 1이라는 하나의 정보를 저장할 수 있는 공간을 의미합니다. 컴퓨터에서 데이터 처리의 최소 단위입니다.
+* **Byte(바이트)** 8개의 bit(8 bit)로 이루어져 있는데, 컴퓨터는 프로그램에서 의미가 존재하는 데이터를 8개의 bit로 이루어진 단위로 처리합니다. 이를 Byte(바이트)라고 합니다. 8개의 bit로 이루어진 단위를 Octec(옥텟)이라고 부릅니다.
+* **Nibble(니블)** Nibble은 1byte의 절반으로, 4bit를 표현합니다. 2<sup>4</sup>의 값을 표현할 수 있으며, 10진수로 16, 하나의 16진수 값을 표현할 수 있습니다.
+
+### ASCII(American Standard Code for Information Interchange - 아스키) Code
+ASCII 코드는 1963년 미국 ANSI(American National Standard Institute)에서 표준화한 정보 교환용 7비트 부호체계입니다. 기기간 정보 교환을 위해 사용되었으며, 8비트 컴퓨터에서도 사용되어 문자 인코딩의 근간을 이루게 됩니다.
+
+ASCII Code에서 하나의 문자는 1byte로 이루어지며, 8bit 중 첫 비트는 오류 검출을 위한 용도로, 나머지 7비트는 문자를 표시하기 위해 사용됩니다.
+
+#### ASCII Code Table
+|Binary |Octal|Decimal|Hex|Character|
+|-------|-----|-------|---|---------|
+|0000000|000  |0      |0  |NUL      |
+|...    |...  |...    |...|...      |
+|1000000|100  |64     |40 |@        |
+|1000001|101  |65     |41 |A        |
+|1000010|102  |66     |42 |B        |
+|1000011|103  |67     |43 |C        |
+|1000100|104  |68     |44 |D        |
+|1000101|105  |69     |45 |E        |
+|1000110|106  |70     |46 |F        |
+|1000111|107  |71     |47 |G        |
+|1001000|110  |72     |48 |H        |
+|1001001|111  |73     |49 |I        |
+|1001010|112  |74     |4A |J        |
+|...    |...  |...    |...|...      |
+|1100001|140  |97     |61 |a        |
+|1100010|141  |98     |62 |b        |
+|1100011|142  |99     |63 |c        |
+|1100100|143  |100    |64 |d        |
+|1100101|144  |101    |65 |e        |
+|1100110|145  |102    |66 |f        |
+|1100111|146  |103    |67 |g        |
+|1101000|147  |104    |68 |h        |
+|1101001|150  |105    |69 |i        |
+|1101010|151  |106    |6A |j        |
+|...    |...  |...    |...|...      |
+
+## Java Primitive Data Types
 * Java에서 지원하는 8가지 Primitive Data Type
 * 기본 값이 존재하는 data type으로 null이 존재하지 않음
 * 정수, 실수, 문자, 논리 리터럴등의 실제 데이터 값을 저장
 * 예약된 keyword를 사용해 정의
 ```java
-int, short, long, float, double, char, boolean, float
+byte, short, int, long, char, float, double, boolean
 ```
+### 종류
+**byte**
+* 부호있는 정수 (첫 번째 bit가 0이면 양수, 1이면 음수)
+* 8 bit
+* 최소값 -128
+* 최대값 127
+* 기본값 0
+```
+0 0 0 0 1 1 1 1 (10진수 15)
+1 0 0 0 0 0 0 1 (10진수 -1)
+```
+**short**
+* 부호있는 정수
+* 16 bit
+* 최소값 -32,768
+* 최대값 32,767
+* 기본값 0
+
+**int**
+* 32 bit
+* 최소값 -2^31 (-2,147,483,648)
+* 최대값  2^31 -1 (2,147,483,647)
+* 기본값 0
+
+**long**
+* 부호 있는 정수
+* 64 bit
+* 최소값 -2^63 (-9,223,372,036,854,775,808)
+* 최대값  2^63 -1 (9,223,372,036,854,775,807)
+* 기본값 0
+
+**char**
+* Unicode 문자
+* 16 bit
+* 최소값 '\u0000' (또는 0)
+* 최대값 '\uffff'(또는 65,535)
+* 기본값 '\u0000'
+
+**float**
+* Single-precision IEEE 754 floating point(단정밀도 IEEE 754 부동 소수점)
+* 32 bit
+* 최소값 1.175494351 E-38
+* 최대값 3.402823466 E+38
+* 기본값 0.0f
+
+**double**
+* Double-precision IEEE 754 floating point(배정밀도 IEEE 754 부동 소수점)
+* 64 bit
+* 최소값 2.2250738585072014 E-308
+* 최대값 1.7976931348623158 E+308
+* 기본값 0.0d
+
+**boolean**
+* true와 false 두 가지 값만 사용
+* 조건식과 논리 계산에 사용
+* 기본값 false
