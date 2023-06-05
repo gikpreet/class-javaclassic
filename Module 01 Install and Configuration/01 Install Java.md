@@ -51,8 +51,8 @@ $ sudo apt install ./code-<filename>
 이 연습에서는 Visual Studio Code에 Java 확장을 설치합니다. 아래 절차에 따릅니다.
 
 1. Visual Studio Code를 실행합니다.
-2. 왼쪽 패널에서 Extensions를 클릭하고 검색 텍스트 상자에 Java를 입력합니다.
-<img src="images/image02.png" width="200">
+2. 왼쪽 패널에서 Extensions를 클릭하고 검색 텍스트 상자에 Java를 입력합니다.  
+<img src="images/image02.png" width="200">  
 3. Extension Pack for Java를 설치합니다.
 
 ## Visual Studio Code path 설정
@@ -72,4 +72,13 @@ Shell Command: Install ‘code’ command in PATH
 4. 터미널을 열고, 아래 명령을 실행하여 path를 확인합니다.
 ```
 % code -v
+```
+
+## wsl 설치 (Windows 운영체제에만 해당)
+이 연습에서는 Windows 운영체제에 WSL(Windows Subsystem on Linux)를 설치하고 개발 환경을 구성합나디. 아래 절차에 따릅니다.
+
+1. Windows 터미널을 실행합니다.
+2. 아래 명령을 실행하여 wsl을 설치합니다.
+```
+> wsl --install -d ubuntu-22.04
 ```
