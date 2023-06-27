@@ -36,15 +36,22 @@ javac 11.0.19
 ## Visual Studio Code 설치
 이 연습에서는 Ubuntu에 Visual Studio Code를 설치합니다. 아래 절차에 따릅니다.
 
-1. 웹 브라우저를 실행하고 아래 웹 사이트로 이동합니다.
-```
-https://code.visualstudio.com/download
-```
-2. 웹 사이트에서 컴퓨터의 아키텍처에 맞는 .deb 파일을 클릭하여 다운로드 합니다.
-<img src="images/image01.png" width="500">
-3. Downloads 디렉토리로 이동하고, 아래 명령을 실행하여 Visual Studio Code를 설치합니다.
+1. sudo 권한이 있는 사용자로, 다음 명령을 실행하여 패키지 인덱스를 업데이트하고 종속성을 설치합니다.
 ```bash
-$ sudo apt install ./code-<filename>
+$ sudo apt update
+$ sudo apt install software-properties-common apt-transport-https wget
+```
+2. 아래 wget 명령을 실행하여 Microsoft GPG 키를 가져옵니다.
+```bash
+$ wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
+```
+3. 아래 명령을 실행하여 Visual Studio Code 리포지토리를 활성화 합니다.
+```bash
+$ sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
+```
+4. 아래 명령을 실행하여 Visual Studio Code를 설치합니다.
+```
+$ sudo apt install code
 ```
 
 ## Visual Studio Code에서 Java extension 설치
