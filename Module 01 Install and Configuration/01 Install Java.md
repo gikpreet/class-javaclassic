@@ -59,7 +59,7 @@ $ sudo apt install code
 
 1. Visual Studio Code를 실행합니다.
 2. 왼쪽 패널에서 Extensions를 클릭하고 검색 텍스트 상자에 Java를 입력합니다.  
-<img src="images/image02.png" width="200">  
+<img src="images/image02.png" width="400">  
 3. Extension Pack for Java를 설치합니다.
 
 ## Visual Studio Code path 설정
@@ -73,10 +73,11 @@ $ sudo apt install code
 Shell Command: Install ‘code’ command in PATH
 (한글) 셸 명령: PATH에 'code' 명령 설치
 ```
-![](images/image04.png)
+
+<img src="images/image04.png" width="700">  
 
 3. 지문 인식 또는 패스워드를 입력하여 인증을 제공합니다.
-4. 터미널을 열고, 아래 명령을 실행하여 path를 확인합니다.
+4. 터미널을 열고, 아래 명령을 실행하여 path를 확인합니다. 
 ```
 % code -v
 ```
