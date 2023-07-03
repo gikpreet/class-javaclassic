@@ -16,3 +16,5 @@ NHN Academy는 Java의 기본 개발 환경으로 Linux 운영체제를 사용�
 
 ## 2. Windows 10에서 wsl 설치
 Windows에서는 
+
+https://llighter.github.io/install_wsl2/
