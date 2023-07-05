@@ -1,5 +1,5 @@
 # Install and Configure Java Programming Environment
-## Utuntu에 Java 설치
+## Ubuntu에 Java 설치
 이 연습에서는 Ubuntu에 Java 프로그래밍 환경을 설치합니다. 아래 절차에 따릅니다.
 
 1. 터미널을 실행합니다.
