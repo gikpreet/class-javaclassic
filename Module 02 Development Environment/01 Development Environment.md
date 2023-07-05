@@ -10,38 +10,38 @@
 ## Compile & Run
 
 ```sh
-command -v javac # javac라는 명령을 쓸 수 있나요?
-echo $? # 그렇다면 return 값은 0
-javac --version # Java compiler
-command -v java && echo yes # 한 줄로 확인
-java --version # JVM(Java virtual machine)
+$ command -v javac # javac라는 명령을 쓸 수 있나요?
+$ echo $? # 그렇다면 return 값은 0
+$ javac --version # Java compiler
+$ command -v java && echo yes # 한 줄로 확인
+$ java --version # JVM(Java virtual machine)
 ```
 
 ```sh
-file Demo.java
-javac Demo.java # compile
+$ file Demo.java
+$ javac Demo.java # compile
 [ -e "Demo.class" ] &&
   [ -x "Demo.class" ] &&
   ./Demo.class ||
   echo Demo.class is not executable
-./Demo.class
-echo $?
-ls -l Demo.class # check -rwx- permission
-file Demo.class
-java Demo # run everywhere with JVM
+$ ./Demo.class
+$ echo $?
+$ ls -l Demo.class # check -rwx- permission
+$ file Demo.class
+$ java Demo # run everywhere with JVM
 ```
 
 ```sh
-od -ac Demo.class # octal dump
-javap -v Demo # byte code viewer
-javap -v java.lang.Object
+$ od -ac Demo.class # octal dump
+$ javap -v Demo # byte code viewer
+$ javap -v java.lang.Object
 ```
 
 ```sh
 # 모든 일을 한 줄로
 # command sequence with &&
-rm Demo.class # rm -f Demo.class
-command -v javac &&
+$ rm Demo.class # rm -f Demo.class
+$ command -v javac &&
   command -v java &&
 [ -e "Demo.java" ] &&
   [ ! -e "Demo.class" ] &&

@@ -30,13 +30,14 @@ Windows Terminal 설치를 위해 아래 절차를 따릅니다.
 > - wsl2는 Windows 10 버전 1903, 빌드 18362 이상에서 동작합니다.
 > - 동작중인 Windows 10이 그 이하의 버전이면, 이상의 버전으로 업그레이드 해야 합니다.
 > - Windows 10의 최종 버전인 22H2 버전으로 업그레이드 하는 것이 좋습니다.
-> - 2023년 6월 기준, 최신 빌드는 19044.3155 입니다.
+> - 2023년 6월 기준, 최신 빌드는 19045.3088 입니다.
 
 3. 아래 명령을 실행하여 Windows에 설치된 패키지를 확인합니다.
 ```
 > winget list
 ```
-> winget이 발견되지 않으면 Microsoft Store에서 winget으로 검색하고 App Installer(앱 설치 관리자)를 설치합니다.
+> winget이 발견되지 않으면 Microsoft Store에서 winget으로 검색하고 App Installer(앱 설치 관리자)를 설치합니다.  
+> winget 설치에 실패할 경우 Windows Terminal을 Microsoft Store에서 직접 설치할 수 있습니다.
 
 4. 아래 명령을 실행하여 Windows Terminal 설치 여부를 확인합니다.
 ```
