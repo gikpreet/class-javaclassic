@@ -1,7 +1,7 @@
-# Install and Configure Java Programming Environment
-## Ubuntu에 Java 설치
-이 연습에서는 Ubuntu에 Java 프로그래밍 환경을 설치합니다. 아래 절차에 따릅니다.
+# Install and Configure Java Programming Environment on Ubuntu
+이 연습에서는 Ubuntu에서 Java 프로그래밍 환경을 구성합니다. 아래 절차에 따릅니다.
 
+## JDK (Java Development Kit) 설치
 1. 터미널을 실행합니다.
 2. 아래 명령을 실행하여 패키지를 업데이트 합니다.
 ```bash
@@ -58,35 +58,8 @@ $ sudo apt install code
 이 연습에서는 Visual Studio Code에 Java 확장을 설치합니다. 아래 절차에 따릅니다.
 
 1. Visual Studio Code를 실행합니다.
-2. 왼쪽 패널에서 Extensions를 클릭하고 검색 텍스트 상자에 Java를 입력합니다.  
-<img src="images/image02.png" width="400">  
+2. 왼쪽 패널에서 Extensions를 클릭하고 검색 텍스트 상자에 Java를 입력합니다.
+
+<img src="images/image02.png" width="400">
 3. Extension Pack for Java를 설치합니다.
 
-## Visual Studio Code path 설정
-이 연습에서는 Visual Studio Code의 원활한 사용을 위해 path를 설정합니다. Windows와 Linux 운영체제에서는 Visual Studio Code를 설치하면 path가 지정되므로, 작업이 필요하지 않습니다.
-
-> 이 작업은 macOS 운영체제에서만 실행합니다.
-
-1. Visual Studio Code를 실행합니다.
-2. Ctrl + Shift + P 키를 눌러 명령 팔레트를 열고, path로 검색한 후 아래 명령을 실행합니다.
-```
-Shell Command: Install ‘code’ command in PATH
-(한글) 셸 명령: PATH에 'code' 명령 설치
-```
-
-<img src="images/image04.png" width="700">  
-
-3. 지문 인식 또는 패스워드를 입력하여 인증을 제공합니다.
-4. 터미널을 열고, 아래 명령을 실행하여 path를 확인합니다. 
-```
-% code -v
-```
-
-## wsl 설치 (Windows 운영체제에만 해당)
-이 연습에서는 Windows 운영체제에 WSL(Windows Subsystem on Linux)를 설치하고 개발 환경을 구성합나디. 아래 절차에 따릅니다.
-
-1. Windows 터미널을 실행합니다.
-2. 아래 명령을 실행하여 wsl을 설치합니다.
-```
-> wsl --install -d ubuntu-22.04
-```
