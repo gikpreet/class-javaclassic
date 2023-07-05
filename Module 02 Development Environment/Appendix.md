@@ -1,6 +1,10 @@
 ## UNIX command 명령
+* command  
 UNIX의 기본 명령어중의 하나인 [command](https://www.ibm.com/docs/ko/aix/7.2?topic=c-command-command) 명령은 단순 명령을 실행합니다.
 command -v 및 command -V 명령은 쉘에서 사용되는 경로 이름과 쉘이 명령 유형을 해석하는 방식(내장, 함수, 별명 등)을 표준 출력에 기록합니다.
+* file  
+[file](https://www.ibm.com/docs/ko/aix/7.2?topic=f-file-command) 
+
 
 ## UNIX 특수 문자 명령어
 |명령어|사용 예|설명|
@@ -12,5 +16,6 @@ command -v 및 command -V 명령은 쉘에서 사용되는 경로 이름과 쉘�
 |\|\| |	mkdir a \|\| mkdir b|	명령어1이 실패하면 명령어2를 실행|
 |&	  |find a & echo 'wait'|	명령어1을 백그라운드로 실행하고 명령어2를 실행|
 |;	  |mkdir a ; mkdir b ; mkdir c|	여러 명령어를 한 줄에서 순서대로 수행할 수 있음|
-|{}	  |{find a & echo 'wait'} && echo 'success'|	명령을 그룹화하여 순서를 지정할 수 있음
+|{}	  |{find a & echo 'wait'} && echo 'success'|	명령을 그룹화하여 순서를 지정할 수 있음|
+
 
