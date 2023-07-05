@@ -3,7 +3,9 @@
 UNIX의 기본 명령어중의 하나인 [command](https://www.ibm.com/docs/ko/aix/7.2?topic=c-command-command) 명령은 단순 명령을 실행합니다.
 command -v 및 command -V 명령은 쉘에서 사용되는 경로 이름과 쉘이 명령 유형을 해석하는 방식(내장, 함수, 별명 등)을 표준 출력에 기록합니다.
 * file  
-[file](https://www.ibm.com/docs/ko/aix/7.2?topic=f-file-command) 
+[file](https://www.ibm.com/docs/ko/aix/7.2?topic=f-file-command) 명령은 지정된 파일의 종류를 확인합니다.
+* od  
+[od](https://www.ibm.com/docs/ko/aix/7.2?topic=o-od-command) 명령은 octal dump라는 의미로, 바이너리 파일을 8진수로 덤프해서 출력합니다.
 
 
 ## UNIX 특수 문자 명령어
@@ -17,5 +19,49 @@ command -v 및 command -V 명령은 쉘에서 사용되는 경로 이름과 쉘�
 |&	  |find a & echo 'wait'|	명령어1을 백그라운드로 실행하고 명령어2를 실행|
 |;	  |mkdir a ; mkdir b ; mkdir c|	여러 명령어를 한 줄에서 순서대로 수행할 수 있음|
 |{}	  |{find a & echo 'wait'} && echo 'success'|	명령을 그룹화하여 순서를 지정할 수 있음|
+
+## Lexical Grammar
+**Token**  
+Token(토큰)은 프로그래밍 언어에서 문법적으로 의미있는 최소 단위를 말합니다. 토큰의 구성은 일반적으로 다음과 같습니다.
+* IdentifiedName
+* Reserved Word(예약어)
+* Punctuator(문장부호)
+* Literal(리터럴)
+* Template(템플릿 문자)
+
+**Control Characters(제어 문자)**  
+눈에 보이지는 않지만 컴퓨터가 여러가지 제어를 목적으로 삽입하는 문자입니다.
+
+**White Space Characters(공백 문자)**  
+공백을 표현하기 위한 문자입니다. 일반적으로 스페이스바를 쳐서 입력합니다.
+
+**Line Terminator Characters(줄바꿈 문자)**  
+줄과 줄을 구분시켜주는 문자입니다. 특정 언어에서 줄바꿈 문자는 코드 실행에 영향을 주지 않는 경우가 있습니다.
+
+**Comments**  
+코드에 대한 추가 설명 또는 코드의 실행을 막기위해 사용하는 문자입니다. 언어에 따라 한 줄 주석과 여러 줄 주석이 있습니다.
+
+**Reserved Words(예약어)**  
+언어 차원에서 미리 등록하여 특별한 의미로 사용중인 단어들입니다. 예약어는 흔히 키워드라고 불리지만, 차이는 키워드는 당장 사용은 가능하지만 예약어느 당장 사용하지는 못하고 미래에 사용하기 위해 등록된 단어와 키워드 모두를 의미합니다.
+
+**Punctuator(문장 부호)**  
+연산 등 특별한 의미를 가지고 있는 문자입니다. 일반적인 언어에서 문장부호는 다음과 같은 것들입니다.
+```
+{ } ( ) [ ]
+. ... ; ,
+< > <= >= => == != === !==
++ - * % **
+++ --
+<< >> >>> & | ^
+! ~ && ||
+? :
+/ = += -= *= %= **= <<= >>= >>>= &= |= ^= /=
+```
+
+**Literal(리터럴)**
+더 이상 분해할 수 없는 고정된 값을 의미합니다. 변하지 않는 데이터 그 자체입니다.
+
+**Delimiter(구분자)**
+별도의 독립적 영약 사이의 경계를 지정하는데 사용하는 하나의 문자 혹은 문자의 배열을 말합니다.
 
 
