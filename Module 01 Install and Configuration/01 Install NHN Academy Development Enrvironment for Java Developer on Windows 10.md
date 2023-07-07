@@ -1,4 +1,4 @@
-# Install NHN Academy Development Enrvironment for Java Developer on Windows
+# Install NHN Academy Development Enrvironment for Java Developer on Windows 10
 여기에서는 Java 개발을 위한 환경을 Windows 10이 설치된 컴퓨터 상에서 구성합니다. 이 설치는 Windows 10 20H2, 빌드 18362이상의 버전(Windows 11 포함)에서 유효합니다.
 
 ## 1. 설치 개요

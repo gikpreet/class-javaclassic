@@ -33,7 +33,7 @@ $ javac -version
 javac 11.0.19
 ```
 
-## Visual Studio Code 설치
+## Visual Studio Code 설치 (WSL이 아닌 Ubuntu를 바로 설치한 경우)
 이 연습에서는 Ubuntu에 Visual Studio Code를 설치합니다. 아래 절차에 따릅니다.
 
 1. sudo 권한이 있는 사용자로, 다음 명령을 실행하여 패키지 인덱스를 업데이트하고 종속성을 설치합니다.
@@ -53,6 +53,18 @@ $ sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos
 ```
 $ sudo apt install code
 ```
+
+## WSL 사용자의 경우
+WSL에서 Ubuntu를 사용하는 경우, Visual Studio Code를 호스트 운영체제인 Windows에 설치해야 합니다. 여기에서는 winget을 사용하여 호스트 운영체제에 Visual Studio Code를 설치합니다.
+
+1. Windows Terminal을 실행합니다.
+2. PowerShell에서, 아래 명령을 실행하여 Visual Studio Code를 설치합니다.
+```powershell
+> winget install -e --id Microsoft.VisualStuduoCode
+```
+3. 설치가 완료되면 Visual Studo Code를 실행합니다.
+4. Visual Studo Code 왼쪽의 *Extensions*를 클릭하고 wsl 확장을 검색하여 설치합니다.
+<img src="images/image07.png />
 
 ## Visual Studio Code에서 Java extension 설치
 이 연습에서는 Visual Studio Code에 Java 확장을 설치합니다. 아래 절차에 따릅니다.

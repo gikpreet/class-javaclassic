@@ -59,7 +59,7 @@ $ command -v javac &&
 
 ### 실습:
 
-[`Demo`](Demo.java) application에서:
+[`Demo`](code/Demo.java) application에서:
 
 - main을 Main으로 바꾸면?
 - class 이름을 Demo에서 demo로 바꾸면?
