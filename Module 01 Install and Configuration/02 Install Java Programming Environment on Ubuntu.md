@@ -63,8 +63,8 @@ WSL에서 Ubuntu를 사용하는 경우, Visual Studio Code를 호스트 운영�
 > winget install -e --id Microsoft.VisualStuduoCode
 ```
 3. 설치가 완료되면 Visual Studo Code를 실행합니다.
-4. Visual Studo Code 왼쪽의 *Extensions*를 클릭하고 wsl 확장을 검색하여 설치합니다.
-<img src="images/image07.png />
+4. Visual Studo Code 왼쪽의 *Extensions*를 클릭하고 wsl 확장을 검색하여 설치합니다.  
+<img src="images/image08.png" />
 
 ## Visual Studio Code에서 Java extension 설치
 이 연습에서는 Visual Studio Code에 Java 확장을 설치합니다. 아래 절차에 따릅니다.

@@ -3,7 +3,7 @@
 ## Git
 
 1. git 설치
-1. `cd ~/Documents &&
+1. `mkdir ~/Documents && cd ~/Documents &&
     git clone --depth 1 https://github.com/nhnacademy/settings`
 1. [README](https://github.com/nhnacademy/settings/blob/main/README.md)
 
