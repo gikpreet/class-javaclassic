@@ -15,13 +15,19 @@ NHN Academy는 Java의 기본 개발 환경으로 Linux 운영체제를 사용�
 
 **중요: 이 작업을 위해서는 해당 컴퓨터의 CPU 가상화 기술이 활성화되어 있어야 합니다**
 
-## 1. wsl을 사용하여 Windows에 Linux 설치
+## 2. wsl을 사용하여 Windows에 Linux 설치
 여기에서는 Windows 11에서 wsl2를 설치합니다. Microsoft의 [공식 설치 매뉴얼](https://learn.microsoft.com/ko-kr/windows/wsl/install)을 참조할 수 있습니다.
 1. 시작 버튼을 클릭하고 터미널을 검색하여 실행합니다.
-2. 아래 명령을 실행하여 wsl을 설치합니다. 아래 명령은 다음 동작들을 포함합니다.
-    * Windows의 VirtualMachinePlatform 기능을 설치합니다.
-    * Windows의 Windows Subsystem for Linux 기능을 설치합니다.
-    * WSL에서 동작하는 Ubuntu 운영체제를 설치합니다.
+2. 아래 명령을 실행하여 wsl을 설치합니다.
+```
+> wsl --install
+```
+위 명령은 다음 동작들을 포함합니다.
+```
+* Windows의 VirtualMachinePlatform 기능을 설치합니다.
+* Windows의 Windows Subsystem for Linux 기능을 설치합니다.
+* WSL에서 동작하는 Ubuntu 운영체제를 설치합니다.
+```
 3. 설치가 완료되면 시스템을 리부팅 합니다.
 4. 리부팅이 완료되면, Windows Terminal에서 설정이 완료되기를 기다린 후, 설치된 Ubuntu 운영체제의 사용자와 패스워드를 입력합니다.
 ```
@@ -46,3 +52,11 @@ Release       : 22.04
 Codename      : Jammy
 ```
 6. 설치가 완료되었습니다.
+
+## 3. 설치 확인
+1. Windows Terminal을 실행합니다.
+2. 기본 창 옆의 아래쪽 화살표를 클릭하고 Ubuntu <버전>이 표시되는 것을 확인합니다.
+<img src="images/image09.png" >
+> 기본 명령으로 설치했을 경우, Ubuntu의 버전이 표시되지 않습니다.
+> WSL에는 여러 버전의 Linux를 여러 개 설치할 수 있습니다. 위 그림은 Ubuntu 22.04와 20.04 두 Ubuntu Liunx가 설치된 것을 보여줍니다.
+3. 설치된 Linux를 클릭합니다. Ubuntu Linux가 실행됩니다.
